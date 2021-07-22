@@ -85,7 +85,7 @@ body {
 }
 
 .form-input-number {
-  width: 200px;
+  width: 210px;
 }
 
 .form-input:focus {
@@ -266,11 +266,6 @@ body {
 
   .form {
     padding: 20px 10px;
-  }
-
-  .form-input {
-    max-width: none;
-    width: 100%;
   }
 }
 
