@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <input type="checkbox" name="toggleProgram" class="form-radio toggle" id="toggleProgram">
+    <label for="toggleProgram" class="radio-text toggle-text">
+      Зашифровать/Расшифровать
+    </label>
+    <div class="form-wrapper">
+      <form class="form">
+        <div class="form-inner">
+          <legend class="form-legend">Закодировать шифром&nbsp;Цезаря</legend>
+          <div class="decoded-message-wrapper">
+            <p class="decoded-message"></p>
+          </div>
+          <label class="form-label">
+            <div class="label-text">Введите послание для шифровки на русском:</div>
+            <textarea name="encryption" class="form-input form-textarea" rows="3"></textarea>
+          </label>
+          <label class="form-label">
+            Сдвиг алфавита:
+            <input type="number" name="shift" class="form-input form-input-number" min="1" max="100">
+          </label>
+          <div class="radio-group">
+            <label class="form-label label-radio">
+              <input type="radio" name="shiftDirection" value="right" class="form-radio" checked>
+              <p class="radio-text">Сдвиг вправо (В🠒Д)</p>
+            </label>
+            <label class="form-label label-radio">
+              <input type="radio" name="shiftDirection" value="left" class="form-radio">
+              <p class="radio-text">Сдвиг влево (А🠐В)</p>
+            </label>
+          </div>
+          <button type="submit" class="form-btn">Зашифровать</button>
+        </div>
+      </form>
+    </div>
+    <div class="text-help-wrapper">
+      <p class="text-help">*В основе шифра Цезаря лежит простой принцип: сдвиг символов в исходном алфавите. Например, возьмем слово «привет», если сдвинуть все буквы на две вперёд («п» стало «с», «р» стало «т» и так далее), то получится «сткджф». Чтобы прочитать зашифрованное сообщение нужно знать, какой алфавит использовался и на сколько символов был сделан сдвиг в шифре.</p>
+      <p class="text-help">**В данной программе используется русский алфавит (заглавные и строчные буквы) и знаки препинания.</p>
+    </div>
+  </div>
+</body>
+</html>
