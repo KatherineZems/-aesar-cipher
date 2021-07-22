@@ -5,7 +5,9 @@ const formLegend = document.querySelector('.form-legend')
 const decodedText = document.querySelector('.decoded-message')
 const inputLabel = document.querySelector('.label-text')
 const submitBtn = document.querySelector('.form-btn')
-
+const radioRight = document.querySelector('[value="right"]')
+const radioLeft = document.querySelector('[value="left"]')
+const textarea = document.querySelector('.form-textarea')
 
 // Переключатель типа программы
 toggleProg.addEventListener('change', () => {
@@ -19,8 +21,9 @@ toggleProg.addEventListener('change', () => {
   }, 50)
 
   setTimeout(() => {
-    form.reset()
+    textarea.value = decodedText.textContent
     decodedText.innerHTML = ""
+
     if(toggleProg.checked) {
       formLegend.innerHTML = "Дешифровщик шифра&nbsp;Цезаря"
       inputLabel.innerHTML = "Введите зашифрованное послание:"
@@ -30,6 +33,9 @@ toggleProg.addEventListener('change', () => {
       inputLabel.innerHTML = "Введите послание для шифровки на русском:"
       submitBtn.innerHTML = "Зашифровать"
     }
+
+    radioRight.checked ? radioLeft.checked = true : radioRight.checked = true
+
   }, 650)
 })
 
