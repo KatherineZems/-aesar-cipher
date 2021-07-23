@@ -147,8 +147,7 @@ body {
   cursor: pointer;
 }
 
-.form-btn:hover,
-.form-btn:focus {
+.form-btn:hover {
   background-color: #e26533;
 }
 
