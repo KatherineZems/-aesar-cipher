@@ -45,21 +45,7 @@ body {
 .form-legend {
   font-size: 1.5rem;
   text-align: center;
-}
-
-.decoded-message-wrapper {
-  overflow: auto;
-  height: 4.7rem;
-  background-color: #fff;
-  margin: 20px 0;
-  padding: 5px 8px;
-  border-radius: 5px;
-}
-
-.decoded-message {
-  overflow-wrap: break-word;
-  margin: 0;
-  color: #3b3b3b
+  margin-bottom: 20px;
 }
 
 /* Инпуты */
@@ -82,6 +68,7 @@ body {
 
 .form-textarea {
   resize: none;
+  overflow-wrap: break-word;
 }
 
 .form-input-number {

@@ -2,12 +2,12 @@ const toggleProg = document.querySelector('.toggle')
 const form = document.querySelector('.form')
 const formInner = document.querySelector('.form-inner')
 const formLegend = document.querySelector('.form-legend')
-const decodedText = document.querySelector('.decoded-message')
+const decodedText = document.querySelector('[name="answer"]')
 const inputLabel = document.querySelector('.label-text')
 const submitBtn = document.querySelector('.form-btn')
 const radioRight = document.querySelector('[value="right"]')
 const radioLeft = document.querySelector('[value="left"]')
-const textarea = document.querySelector('.form-textarea')
+const textarea = document.querySelector('[name="encryption"]')
 
 // Переключатель типа программы
 toggleProg.addEventListener('change', () => {
@@ -21,8 +21,8 @@ toggleProg.addEventListener('change', () => {
   }, 50)
 
   setTimeout(() => {
-    textarea.value = decodedText.textContent
-    decodedText.innerHTML = ""
+    textarea.value = decodedText.value
+    decodedText.value = ""
 
     if(toggleProg.checked) {
       formLegend.innerHTML = "Дешифровщик шифра&nbsp;Цезаря"
@@ -80,5 +80,5 @@ form.addEventListener('submit', (e) => {
   let shift = +data.get('shift')
   let shiftDirection = data.get('shiftDirection')
   
-  decodedText.textContent = decoder(encodedSymbolsNumbers, shift, shiftDirection)
+  decodedText.value = decoder(encodedSymbolsNumbers, shift, shiftDirection)
 })

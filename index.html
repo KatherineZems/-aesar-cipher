@@ -18,25 +18,25 @@
       <form class="form">
         <div class="form-inner">
           <legend class="form-legend">Закодировать шифром&nbsp;Цезаря</legend>
-          <div class="decoded-message-wrapper">
-            <p class="decoded-message"></p>
-          </div>
+          <label class="form-label">
+            <textarea name="answer" class="form-input form-textarea" rows="3" readonly></textarea>
+          </label>
           <label class="form-label">
             <div class="label-text">Введите послание для шифровки на русском:</div>
             <textarea name="encryption" class="form-input form-textarea" rows="3" required></textarea>
           </label>
           <label class="form-label">
             Сдвиг алфавита (число):
-            <input type="number" name="shift" class="form-input form-input-number" min="1" max="100" required>
+            <input type="number" name="shift" class="form-input form-input-number" min="1" max="50" required>
           </label>
           <div class="radio-group">
             <label class="form-label label-radio">
               <input type="radio" name="shiftDirection" value="right" class="form-radio" checked>
-              <p class="radio-text">Сдвиг вправо (В🠒Д)</p>
+              <p class="radio-text">Сдвиг вправо (В→Д)</p>
             </label>
             <label class="form-label label-radio">
               <input type="radio" name="shiftDirection" value="left" class="form-radio">
-              <p class="radio-text">Сдвиг влево (А🠐В)</p>
+              <p class="radio-text">Сдвиг влево (А←В)</p>
             </label>
           </div>
           <button type="submit" class="form-btn">Зашифровать</button>
